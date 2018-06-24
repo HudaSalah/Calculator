@@ -4,26 +4,27 @@
       <div class="h-100 row align-items-center flex-column">
         <button (click)="BackToCalc()" class="btn my-3">Back to Calculator</button>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control p-2" type="search" name="search" [(ngModel)]="filterS" placeholder="Search by Equation here..." aria-label="Search">
-          </form>
-          <div class="container row text-center">           
-            <div class="col-md-6">
-              <h2 class="py-3">Equations</h2>
-              <ul>
-                <li *ngFor="let item of AllTransaction | filter:filterS; let i=index;">
-                 {{item.equation}}
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h2 class="py-3">Results</h2>
-              <ul>
-                  <li *ngFor="let item of AllTransaction | filter:filterS; let i=index;">
-                    {{item.result}}
-                  </li>
-                </ul>
-            </div>
+          <input class="form-control p-2" type="search" name="search" [(ngModel)]="filterS" placeholder="Search by Equation here..."
+            aria-label="Search">
+        </form>
+        <div class="container row text-center">
+          <div class="col-md-6">
+            <h2 class="py-3">Equations</h2>
+            <ul>
+              <li *ngFor="let item of AllTransaction | filter:filterS; let i=index;">
+                {{item.equation}}
+              </li>
+            </ul>
           </div>
+          <div class="col-md-6">
+            <h2 class="py-3">Results</h2>
+            <ul>
+              <li *ngFor="let item of AllTransaction | filter:filterS; let i=index;">
+                {{item.result}}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>

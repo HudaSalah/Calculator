@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from '@angular/router';
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-calculator",
@@ -7,10 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ["./calculator.component.scss"]
 })
 export class CalculatorComponent implements OnInit {
-  constructor(private myRoute:Router) {}
+  constructor(private myRoute: Router) {}
 
-  GETtransaction():void{
-    this.myRoute.navigateByUrl('/Print');
+  GETtransaction(): void {
+    this.myRoute.navigateByUrl("/Print");
   }
 
   ngOnInit() {
@@ -18,7 +18,6 @@ export class CalculatorComponent implements OnInit {
     var Keys = document.querySelectorAll("#calculator span");
     var Operators = ["+", "-", "x", "÷"];
     var decimalAdded = false;
-
     var arrObj: Array<object> = [];
 
     // Add onclick event to all the keys and perform operations
@@ -44,7 +43,6 @@ export class CalculatorComponent implements OnInit {
           var equation = InputScreen.innerHTML;
           var lastChar = equation[equation.length - 1];
           oneCalc.equation = equation;
-          console.log(equation);
 
           // Replace all x and ÷ with * and / respectively.
           equation = equation.replace(/x/g, "*").replace(/÷/g, "/");
@@ -53,16 +51,11 @@ export class CalculatorComponent implements OnInit {
           if (Operators.indexOf(lastChar) > -1 || lastChar == ".")
             equation = equation.replace(/.$/, "");
 
-          if (equation)
+          if (equation) 
           InputScreen.innerHTML = eval(equation);
           oneCalc.result = InputScreen.innerHTML;
-          
-          //see output of object
-          console.log(oneCalc);
           arrObj.push(oneCalc);
-          localStorage.setItem("HistoryArr",JSON.stringify(arrObj));
-          //see output of array of all transactions
-          console.log(arrObj);
+          localStorage.setItem("HistoryArr", JSON.stringify(arrObj));
           decimalAdded = false;
         } 
         else if (Operators.indexOf(btnVal) > -1) {

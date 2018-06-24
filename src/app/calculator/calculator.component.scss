@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Lobster+Two|Righteous');
 //fonts
-$Tilte-font: 'Lobster Two',cursive;
+$Tilte-font: 'Lobster Two',
+cursive;
 //colors
 $color_1: white;
 $color_2: #E91E63;
@@ -41,95 +42,92 @@ main {
     background-size: contain;
     background-position: center;
     height: 100vh;
-
-    .btn
-    {
+    .btn {
       height: 40px;
       width: 212px;
       font-family: $Tilte-font;
       font-size: 23px;
       color: $color_1;
       background: linear-gradient($bg-color-1, #8bceec);
-
-      &:hover{
+      &:hover {
         transition-duration: .5s;
         background: #ff9fa8;
-        box-shadow: 0px 4px #ff7c87;        
+        box-shadow: 0px 4px #ff7c87;
       }
     }
-  }
-  #calculator {
-    width: 325px;
-    height: auto;
-    padding: 20px 20px 9px;
-    background: linear-gradient($bg-color-1, #8bceec);
-    border-radius: 3px;
-    box-shadow: 0px 4px #457b94;
-  }
-  .top {
-    span.clear {
-      @extend %key;
-      background: #ff9fa8;
-      box-shadow: 0px 4px #ff7c87;
-      color: $color_1;
-      &:hover {
-        background: #f68991;
-        box-shadow: 0px 4px #d3545d;
-        color: $color_1;
-      }
-      &:active {
-        top: 4px;
-        box-shadow: 0px 0px #d3545d;
-      }
-    }
-    .screen {
-      height: 40px;
-      width: 212px;
-      background: $screen-bg;
+    #calculator {
+      width: 325px;
+      height: auto;
+      padding: 20px 20px 9px;
+      background: linear-gradient($bg-color-1, #8bceec);
       border-radius: 3px;
-      box-shadow: inset 0px 4px $screen-bg;
-      font-size: 17px;
-      line-height: 40px;
-      color: #27b3e2;
-      text-shadow: 1px 1px 2px $screen-bg;
-      letter-spacing: 1px;
-    }
-  }
-  .keys {
-    span {
-      @extend %key;
-      float: left;
-      position: relative;
-      &:hover {
-        background: #721c24;
-        box-shadow: 0px 4px #a92f58;
-        color: $color_1;
-        transition-duration: .5s;
+      box-shadow: 0px 4px #457b94;
+      .top {
+        span.clear {
+          @extend %key;
+          background: #ff9fa8;
+          box-shadow: 0px 4px #ff7c87;
+          color: $color_1;
+          &:hover {
+            background: #f68991;
+            box-shadow: 0px 4px #d3545d;
+            color: $color_1;
+          }
+          &:active {
+            top: 4px;
+            box-shadow: 0px 0px #d3545d;
+          }
+        }
+        .screen {
+          height: 40px;
+          width: 212px;
+          background: $screen-bg;
+          border-radius: 3px;
+          box-shadow: inset 0px 4px $screen-bg;
+          font-size: 17px;
+          line-height: 40px;
+          color: #27b3e2;
+          text-shadow: 1px 1px 2px $screen-bg;
+          letter-spacing: 1px;
+        }
       }
-      &:active {
-        box-shadow: 0px 0px #6d233c;
-        top: 4px;
-      }
-    }
-    span.operator {
-      @extend %operator-color;
-      &:hover {
-        background-color: #f05461;
-        color: $color_1;
-        transition-duration: .5s;
-      }
-    }
-    span.eval {
-      @extend %operator-color;
-      &:hover {
-        background: #fde40d;
-        box-shadow: 0px 4px #607D8B;
-        box-shadow: 0px 4px $yellow-color;
-        color: $color_2;
-      }
-      &:active {
-        box-shadow: 0px 0px $yellow-color;
-        top: 4px;
+      .keys {
+        span {
+          @extend %key;
+          float: left;
+          position: relative;
+          &:hover {
+            background: #721c24;
+            box-shadow: 0px 4px #a92f58;
+            color: $color_1;
+            transition-duration: .5s;
+          }
+          &:active {
+            box-shadow: 0px 0px #6d233c;
+            top: 4px;
+          }
+        }
+        span.operator {
+          @extend %operator-color;
+          &:hover {
+            background-color: #f05461;
+            color: $color_1;
+            transition-duration: .5s;
+          }
+        }
+        span.eval {
+          @extend %operator-color;
+          &:hover {
+            background: #fde40d;
+            box-shadow: 0px 4px #607D8B;
+            box-shadow: 0px 4px $yellow-color;
+            color: $color_2;
+          }
+          &:active {
+            box-shadow: 0px 0px $yellow-color;
+            top: 4px;
+          }
+        }
       }
     }
   }
