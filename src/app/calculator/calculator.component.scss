@@ -1,8 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Lobster+Two|Righteous');
+//fonts
+$Tilte-font: 'Lobster Two',cursive;
+//colors
+$color_1: white;
+$color_2: #E91E63;
+$color_3: #888e5f;
+$bg-color-1: #673AB7;
+$yellow-color: #607D8B;
+$move-hover:#6b54d3;
+$box-shadow: 0px 4px #9da853;
+$screen-bg:rgba(0,0,0,0.2);
+%key {
+  cursor: pointer;
+  width: 66px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0px 4px $screen-bg;
+  margin: 0 7px 11px 0;
+  color: $color_2;
+  line-height: 36px;
+  transition: all 0.2s ease;
+  font-family: $Tilte-font;
+}
 
-main
-{
-    #calculator
+%operator-color {
+  background: #040404;
+  color: #8acbeb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+main {
+  #calculatorSec {
+    background-image: url("../../assets/Imgs/bg2.jpg");
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+
+    .btn
     {
-    
+      height: 40px;
+      width: 212px;
+      font-family: $Tilte-font;
+      font-size: 23px;
+      color: $color_1;
+      background: linear-gradient($bg-color-1, #8bceec);
+
+      &:hover{
+        transition-duration: .5s;
+        background: #ff9fa8;
+        box-shadow: 0px 4px #ff7c87;        
+      }
     }
+  }
+  #calculator {
+    width: 325px;
+    height: auto;
+    padding: 20px 20px 9px;
+    background: linear-gradient($bg-color-1, #8bceec);
+    border-radius: 3px;
+    box-shadow: 0px 4px #457b94;
+  }
+  .top {
+    span.clear {
+      @extend %key;
+      background: #ff9fa8;
+      box-shadow: 0px 4px #ff7c87;
+      color: $color_1;
+      &:hover {
+        background: #f68991;
+        box-shadow: 0px 4px #d3545d;
+        color: $color_1;
+      }
+      &:active {
+        top: 4px;
+        box-shadow: 0px 0px #d3545d;
+      }
+    }
+    .screen {
+      height: 40px;
+      width: 212px;
+      background: $screen-bg;
+      border-radius: 3px;
+      box-shadow: inset 0px 4px $screen-bg;
+      font-size: 17px;
+      line-height: 40px;
+      color: #27b3e2;
+      text-shadow: 1px 1px 2px $screen-bg;
+      letter-spacing: 1px;
+    }
+  }
+  .keys {
+    span {
+      @extend %key;
+      float: left;
+      position: relative;
+      &:hover {
+        background: #721c24;
+        box-shadow: 0px 4px #a92f58;
+        color: $color_1;
+        transition-duration: .5s;
+      }
+      &:active {
+        box-shadow: 0px 0px #6d233c;
+        top: 4px;
+      }
+    }
+    span.operator {
+      @extend %operator-color;
+      &:hover {
+        background-color: #f05461;
+        color: $color_1;
+        transition-duration: .5s;
+      }
+    }
+    span.eval {
+      @extend %operator-color;
+      &:hover {
+        background: #fde40d;
+        box-shadow: 0px 4px #607D8B;
+        box-shadow: 0px 4px $yellow-color;
+        color: $color_2;
+      }
+      &:active {
+        box-shadow: 0px 0px $yellow-color;
+        top: 4px;
+      }
+    }
+  }
 }

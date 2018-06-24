@@ -9,3 +9,5 @@ import * as $ from 'jquery'; // to use jquery
 export class AppComponent {
   title = 'app';
 }
+
+

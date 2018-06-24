@@ -1,6 +1,36 @@
-
 <main>
-  <section id="calculator">
-    
+  <section id="calculatorSec">
+    <div class="h-100 w-100">
+      <div class="h-100 row justify-content-center align-items-center flex-column">
+        <button (click)=" GETtransaction()" class="btn mb-3">Show History</button>
+        <!-- calculator gui -->
+        <div id="calculator">
+          <div class="top">
+            <span class="clear float-left text-center">CLR</span>
+            <div class="screen float-right text-right px-2"></div>
+          </div>
+          <!-- operators and other keys -->
+          <div class="keys text-center">            
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span class="operator mr-0">+</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span class="operator mr-0">-</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span class="operator mr-0">÷</span>
+            <span>0</span>
+            <span>.</span>
+            <span class="eval">=</span>
+            <span class="operator mr-0">x</span>
+          </div>
+        </div>
+<!-- end gui -->
+      </div>
+    </div>
   </section>
 </main>

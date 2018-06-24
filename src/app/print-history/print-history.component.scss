@@ -1,0 +1,22 @@
+@import '../calculator/calculator.component.scss';
+
+main{
+    #calculatorSec{
+        background-image: url(../../assets/Imgs/pexels-photo-1037993.jpeg);
+        background-size: cover;
+        font-family:  $Tilte-font;
+
+        h2{
+            position: relative;
+            &:after{
+                content: "";
+                width:100px;
+                height: 2px;
+                background-color: #000000;
+                position: absolute;
+                left: 42%;
+                top: 60px;
+              }
+        }        
+    }
+}
